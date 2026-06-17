@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <nav>
+        <h1>Task Manger</h1>
+        <button id="toggle">Dark Mode</button>
+      </nav>
+
+      <section class="hero">
+        <div class="task-form">
+          <form>
+            <h2>Create Form</h2>
+            <input
+              id="taskInput"
+              type="text"
+              placeholder="Enter Task..."
+              value="Learn JS"
+            />
+            <select id="categorySelect">
+              <option value="work">Work</option>
+              <option value="food">Food</option>
+              <option value="gym">Gym</option>
+              <option value="study">Study</option>
+            </select>
+            <button id="add" type="submit">Add Task</button>
+          </form>
+        </div>
+
+        <div class="task-container">
+          <input
+            type="text"
+            class="search-task"
+            placeholder="Search tasks..."
+          />
+          <div class="tasks-list">
+            <!-- <div class="task-card">
+              <div class="task-content">
+                <span class="category">Work</span>
+                <h2>Learn Javascript</h2>
+              </div>
+              <div class="actions">
+                <button class="edit-btn">Edit</button>
+                <button class="complete-btn">Complete</button>
+                <button class="delete-btn">Delete</button>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Event Propagation Demo Section -->
+      <div class="event-propagation">
+        <h3>Event Propagation Demo Section</h3>
+        <div class="grandparent">
+          GrandParent
+          <div class="parent">
+            Parent
+            <button class="child-btn">Child Button</button>
+          </div>
+        </div>
+
+        <p>
+          Open the console and click the Child Button to observe Event Bubbling
+          and Event Capturing.
+        </p>
+      </div>
+
+      <!-- Browser Rendering Pipeline Section -->
+      <div class="pipeline">
+        <h3>Browser Rendering Pipeline Section</h3>
+        <div class="container">
+          <div class="elem">HTML</div>
+          <div class="down"><i class="ri-arrow-down-long-fill"></i></div>
+
+          <div class="elem">Parsing</div>
+          <div class="down"><i class="ri-arrow-down-long-fill"></i></div>
+
+          <div class="elem">Tokenization</div>
+          <div class="down"><i class="ri-arrow-down-long-fill"></i></div>
+
+          <div class="elem">DOM Tree</div>
+          <div class="down"><i class="ri-arrow-down-long-fill"></i></div>
+
+          <div class="elem">CSS</div>
+          <div class="down"><i class="ri-arrow-down-long-fill"></i></div>
+
+          <div class="elem">CSSOM Tree</div>
+          <div class="down"><i class="ri-arrow-down-long-fill"></i></div>
+
+          <div class="elem">Render Tree</div>
+          <div class="down"><i class="ri-arrow-down-long-fill"></i></div>
+
+          <div class="elem">Layout</div>
+          <div class="down"><i class="ri-arrow-down-long-fill"></i></div>
+
+          <div class="elem">Paint</div>
+        </div>
+      </div>
+      <div class="pipeline-notes">
+        <p>
+          <strong>HTML:</strong> HTML is raw Hypertext Markup which browser
+          receives
+        </p>
+        <p>
+          <strong>HTML Parsing</strong>Browser Reads the HTML document by
+          Character and understand its structure.
+        </p>
+        <p>
+          <strong>HTML Tokenization</strong> HTML is converted into tokens such
+          as tagName, attributes and textNode
+        </p>
+        <p>
+          <strong>DOM Tree:</strong>Browser creates a tree structure
+          representing the HTML.
+        </p>
+
+        <p><strong>CSS:</strong> CSS holds visual styles of our web</p>
+        <p>
+          <strong>CSSOM Tree:</strong>CSSOM tree hold visual tree object like
+          structure of CSS rules/styles
+        </p>
+        <p>
+          <strong>Render Tree:</strong> The Browser then combines Structure from
+          DOM tree and Styles/rules from CSSOM tree
+        </p>
+        <p>
+          <strong>Layout:</strong>Browser calculates element sizes and
+          positions.
+        </p>
+        <p>
+          <strong>Paint:</strong> Browser draws pixels on the screen with all
+          made previous values.
+        </p>
+        <p><strong>Screen:</strong>Final Web Page which User sees</p>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
